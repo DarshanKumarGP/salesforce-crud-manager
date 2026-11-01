@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salesforce CRUD Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="login" class="center hidden">
+    <div class="card">
+      <h1>Salesforce CRUD Manager</h1>
+      <p>Sign in with Salesforce to view, create, edit and delete Accounts, Opportunities, Leads, Contacts and Cases.</p>
+      <div id="login-error" class="alert hidden"></div>
+      <a class="btn primary" href="/auth/login">Login with Salesforce</a>
+    </div>
+  </section>
+  <main id="app" class="hidden">
+    <header>
+      <h1>Salesforce CRUD Manager</h1>
+      <div class="user"><span id="user"></span><button id="logout" class="btn">Logout</button></div>
+    </header>
+    <div class="toolbar">
+      <select id="object" aria-label="Salesforce object"><option value="">Select an object…</option></select>
+      <input id="search" type="search" placeholder="Search records…" aria-label="Search" disabled>
+      <span id="count"></span>
+      <button id="new" class="btn primary" disabled>+ New</button>
+    </div>
+    <div id="table-wrap" class="table-wrap">
+      <table><thead></thead><tbody></tbody></table>
+      <div id="status" class="status">Choose an object to get started.</div>
+    </div>
+  </main>
+  <dialog id="modal"></dialog>
+  <div id="toasts"></div>
+  <script src="app.js"></script>
+</body>
+</html>
